@@ -1,296 +1,1478 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-BR" data-theme="auto">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- =============================================
+       AC LOJA VIRTUAL — index.html
+       Desenvolvido com HTML5 semântico, CSS3 e JS puro
+  ============================================= -->
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-<title>AC Loja Virtual | Garrafas Personalizadas, Copos Térmicos e Eletrônicos</title>
+  <!-- SEO Básico -->
+  <title>AC Loja Virtual | Garrafas Térmicas, Eletrônicos e Brindes Corporativos</title>
+  <meta name="description" content="Garrafas térmicas, copos personalizados, eletrônicos e brindes corporativos. Qualidade, tecnologia e personalização para transformar seu dia a dia. Compre pelo WhatsApp!" />
+  <meta name="keywords" content="garrafa térmica, copo personalizado, brinde corporativo, smartwatch, power bank, fone bluetooth, AC Loja Virtual, presente empresarial" />
+  <meta name="author" content="AC Loja Virtual" />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://aclojavirtual.com.br/" />
 
-<meta name="description" content="Garrafas personalizadas, copos térmicos, brindes corporativos, smartwatches, caixas de som Bluetooth, carregadores e acessórios para celular.">
+  <!-- Open Graph (Facebook / LinkedIn) -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://aclojavirtual.com.br/" />
+  <meta property="og:title" content="AC Loja Virtual | Qualidade, Tecnologia e Personalização" />
+  <meta property="og:description" content="Garrafas térmicas, eletrônicos e brindes corporativos com qualidade e personalização. Atendimento via WhatsApp." />
+  <meta property="og:image" content="https://aclojavirtual.com.br/assets/images/og-image.jpg" />
+  <meta property="og:locale" content="pt_BR" />
+  <meta property="og:site_name" content="AC Loja Virtual" />
 
-<meta name="keywords" content="garrafa personalizada, copo térmico, brindes corporativos, garrafa térmica, smartwatch, power bank, caixa de som bluetooth">
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="AC Loja Virtual | Qualidade, Tecnologia e Personalização" />
+  <meta name="twitter:description" content="Garrafas térmicas, eletrônicos e brindes corporativos com qualidade e personalização." />
+  <meta name="twitter:image" content="https://aclojavirtual.com.br/assets/images/og-image.jpg" />
 
-<style>
+  <!-- Favicon SVG inline -->
+  <link rel="icon" type="image/svg+xml" href="assets/icons/favicon.svg" />
 
-*{
-margin:0;
-padding:0;
-box-sizing:border-box;
-font-family:Arial,Helvetica,sans-serif;
-}
+  <!-- Web App Manifest -->
+  <link rel="manifest" href="manifest.json" />
+  <meta name="theme-color" content="#0f172a" />
 
-body{
-background:#f5f5f5;
-color:#333;
-}
+  <!-- Google Fonts: Inter + Poppins -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Poppins:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
 
-header{
-background:#0d47a1;
-color:white;
-padding:20px;
-text-align:center;
-}
+  <!-- CSS Principal -->
+  <link rel="stylesheet" href="style.css" />
 
-header h1{
-font-size:38px;
-}
-
-header p{
-margin-top:10px;
-font-size:18px;
-}
-
-.hero{
-padding:60px 20px;
-text-align:center;
-background:white;
-}
-
-.hero h2{
-font-size:42px;
-margin-bottom:20px;
-}
-
-.hero p{
-max-width:800px;
-margin:auto;
-font-size:20px;
-line-height:1.6;
-}
-
-.btn{
-display:inline-block;
-margin-top:30px;
-padding:15px 35px;
-background:#25D366;
-color:white;
-text-decoration:none;
-border-radius:8px;
-font-weight:bold;
-transition:.3s;
-}
-
-.btn:hover{
-background:#128C7E;
-}
-
-section{
-padding:60px 20px;
-max-width:1200px;
-margin:auto;
-}
-
-h2{
-text-align:center;
-margin-bottom:40px;
-font-size:34px;
-}
-
-.grid{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-gap:25px;
-}
-
-.card{
-background:white;
-padding:20px;
-border-radius:12px;
-box-shadow:0 5px 15px rgba(0,0,0,.1);
-text-align:center;
-}
-
-.card img{
-width:100%;
-height:220px;
-object-fit:cover;
-border-radius:10px;
-}
-
-.card h3{
-margin:15px 0;
-}
-
-.price{
-font-size:22px;
-color:#0d47a1;
-font-weight:bold;
-margin-bottom:15px;
-}
-
-footer{
-background:#222;
-color:white;
-text-align:center;
-padding:30px;
-margin-top:50px;
-}
-
-</style>
-
+  <!-- Schema.org JSON-LD -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Store",
+    "name": "AC Loja Virtual",
+    "description": "Garrafas térmicas, copos personalizados, eletrônicos e brindes corporativos.",
+    "url": "https://aclojavirtual.com.br",
+    "telephone": "+55-16-99234-7993",
+    "address": {
+      "@type": "PostalAddress",
+      "addressCountry": "BR"
+    },
+    "sameAs": [
+      "https://instagram.com/aclojavirtual",
+      "https://wa.me/5516992347993"
+    ],
+    "openingHours": "Mo-Sa 08:00-18:00",
+    "priceRange": "$$"
+  }
+  </script>
 </head>
 
 <body>
 
-<header>
-
-<h1>AC Loja Virtual</h1>
-
-<p>Garrafas Personalizadas • Copos Térmicos • Brindes Corporativos • Eletrônicos</p>
-
-</header>
-
-<section class="hero">
-
-<h2>Produtos de Qualidade para Você e Sua Empresa</h2>
-
-<p>
-
-Encontre garrafas personalizadas, copos térmicos, brindes corporativos,
-smartwatches, caixas de som Bluetooth, carregadores, power banks,
-capinhas para celular e muito mais.
-
-</p>
-
-<a class="btn"
-href="https://wa.me/5516992347993?text=Olá!%20Tenho%20interesse%20nos%20produtos%20da%20AC%20Loja%20Virtual."
-target="_blank">
-
-Comprar pelo WhatsApp
-
-</a>
-
-</section>
-
-<section>
-
-<h2>Nossos Produtos</h2>
-
-<div class="grid">
-
-<div class="card">
-
-<img src="https://images.unsplash.com/photo-1602143407151-7111542de6e8?w=600" alt="Garrafa Personalizada">
-
-<h3>Garrafas Personalizadas</h3>
-
-<p>Ideal para empresas, presentes e eventos.</p>
-
-<div class="price">Consulte</div>
-
-<a class="btn" href="https://wa.me/5516992347993?text=Olá! Tenho interesse nas garrafas personalizadas.">Comprar</a>
-
-</div>
-
-<div class="card">
-
-<img src="https://images.unsplash.com/photo-1510557880182-3d4d3cba35a5?w=600" alt="Copo Térmico">
-
-<h3>Copos Térmicos</h3>
-
-<p>Alta qualidade e diversas cores.</p>
-
-<div class="price">Consulte</div>
-
-<a class="btn" href="https://wa.me/5516992347993?text=Olá! Tenho interesse nos copos térmicos.">Comprar</a>
-
-</div>
-
-<div class="card">
-
-<img src="https://images.unsplash.com/photo-1546435770-a3e426bf472b?w=600" alt="Caixa de Som">
-
-<h3>Caixas de Som Bluetooth</h3>
-
-<p>Som potente para qualquer ocasião.</p>
-
-<div class="price">Consulte</div>
-
-<a class="btn" href="https://wa.me/5516992347993?text=Olá! Tenho interesse nas caixas de som Bluetooth.">Comprar</a>
-
-</div>
-
-<div class="card">
-
-<img src="https://images.unsplash.com/photo-1572569511254-d8f925fe2cbb?w=600" alt="Smartwatch">
-
-<h3>Smartwatch</h3>
-
-<p>Estilo, tecnologia e praticidade.</p>
-
-<div class="price">Consulte</div>
-
-<a class="btn" href="https://wa.me/5516992347993?text=Olá! Tenho interesse nos smartwatches.">Comprar</a>
-
-</div>
-
-</div>
-
-</section>
-
-<section>
-
-<h2>Por que comprar conosco?</h2>
-
-<div class="grid">
-
-<div class="card">
-<h3>✅ Produtos Selecionados</h3>
-<p>Qualidade garantida.</p>
-</div>
-
-<div class="card">
-<h3>🚚 Enviamos para todo Brasil</h3>
-<p>Entrega rápida e segura.</p>
-</div>
-
-<div class="card">
-<h3>🎁 Personalização</h3>
-<p>Produtos exclusivos para empresas e eventos.</p>
-</div>
-
-<div class="card">
-<h3>💬 Atendimento Rápido</h3>
-<p>Fale conosco pelo WhatsApp.</p>
-</div>
-
-</div>
-
-</section>
-
-<section style="text-align:center;">
-
-<h2>Solicite seu orçamento</h2>
-
-<p style="font-size:20px">
-
-Atendemos clientes finais e empresas com produtos personalizados.
-
-</p>
-
-<a class="btn"
-href="https://wa.me/5516992347993?text=Olá! Gostaria de solicitar um orçamento."
-target="_blank">
-
-Falar no WhatsApp
-
-</a>
-
-</section>
-
-<footer>
-
-<h3>AC Loja Virtual</h3>
-
-<p>Garrafas Personalizadas • Copos Térmicos • Brindes Corporativos • Eletrônicos</p>
-
-<br>
-
-<p>WhatsApp: (16) 99234-7993</p>
-
-<p>© 2026 - Todos os direitos reservados.</p>
-
-</footer>
-
+  <!-- =============================================
+       HEADER / NAVEGAÇÃO
+  ============================================= -->
+  <header class="header" id="header" role="banner">
+    <nav class="nav container" aria-label="Navegação principal">
+
+      <!-- Logo -->
+      <a href="#hero" class="nav__logo" aria-label="AC Loja Virtual - Página inicial">
+        <div class="nav__logo-icon" aria-hidden="true">AC</div>
+        <div class="nav__logo-text">
+          <span class="nav__logo-name">AC Loja Virtual</span>
+          <span class="nav__logo-tagline">Qualidade &amp; Tecnologia</span>
+        </div>
+      </a>
+
+      <!-- Links de navegação -->
+      <ul class="nav__links" role="list">
+        <li><a href="#produtos" class="nav__link">Produtos</a></li>
+        <li><a href="#brindes" class="nav__link">Brindes Corp.</a></li>
+        <li><a href="#sobre" class="nav__link">Sobre</a></li>
+        <li><a href="#depoimentos" class="nav__link">Depoimentos</a></li>
+        <li><a href="#contato" class="nav__link">Contato</a></li>
+      </ul>
+
+      <!-- CTA WhatsApp -->
+      <a href="https://wa.me/5516992347993?text=Ol%C3%A1!%20Tenho%20interesse%20nos%20produtos%20da%20AC%20Loja%20Virtual."
+         class="btn btn--whatsapp btn--sm"
+         target="_blank" rel="noopener noreferrer"
+         aria-label="Abrir WhatsApp da AC Loja Virtual">
+        <svg class="btn__icon" aria-hidden="true" viewBox="0 0 24 24" fill="currentColor">
+          <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+        </svg>
+        WhatsApp
+      </a>
+
+      <!-- Menu hambúrguer (mobile) -->
+      <button class="nav__toggle" id="navToggle" aria-label="Abrir menu" aria-expanded="false" aria-controls="navLinks">
+        <span class="nav__toggle-bar"></span>
+        <span class="nav__toggle-bar"></span>
+        <span class="nav__toggle-bar"></span>
+      </button>
+
+    </nav>
+  </header>
+
+  <main id="main-content">
+
+    <!-- =============================================
+         HERO
+    ============================================= -->
+    <section class="hero" id="hero" aria-label="Seção principal">
+      <div class="hero__bg" aria-hidden="true">
+        <!-- Gradiente animado + partículas no JS -->
+        <div class="hero__orb hero__orb--1"></div>
+        <div class="hero__orb hero__orb--2"></div>
+        <div class="hero__orb hero__orb--3"></div>
+      </div>
+
+      <div class="container hero__content">
+        <div class="hero__badge reveal" aria-label="Novidades">
+          <span class="hero__badge-dot" aria-hidden="true"></span>
+          Novidades todos os dias
+        </div>
+
+        <h1 class="hero__title reveal reveal--delay-1">
+          Qualidade que você<br />
+          <span class="hero__title-accent">sente na primeira</span><br />
+          experiência.
+        </h1>
+
+        <p class="hero__subtitle reveal reveal--delay-2">
+          Garrafas térmicas, eletrônicos e brindes corporativos premium.<br class="hide-mobile" />
+          Do uso pessoal ao presente corporativo perfeito.
+        </p>
+
+        <div class="hero__actions reveal reveal--delay-3">
+          <a href="#produtos"
+             class="btn btn--primary btn--lg"
+             aria-label="Ver catálogo de produtos">
+            Ver catálogo
+            <svg class="btn__icon" aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M5 12h14M12 5l7 7-7 7"/>
+            </svg>
+          </a>
+          <a href="https://wa.me/5516992347993?text=Ol%C3%A1!%20Gostaria%20de%20solicitar%20um%20or%C3%A7amento."
+             class="btn btn--outline btn--lg"
+             target="_blank" rel="noopener noreferrer"
+             aria-label="Solicitar orçamento via WhatsApp">
+            Solicitar orçamento
+          </a>
+        </div>
+
+        <!-- Stats rápidos -->
+        <div class="hero__stats reveal reveal--delay-4" role="list" aria-label="Dados da empresa">
+          <div class="hero__stat" role="listitem">
+            <strong class="hero__stat-num">+2.400</strong>
+            <span class="hero__stat-label">Clientes satisfeitos</span>
+          </div>
+          <div class="hero__stat-divider" aria-hidden="true"></div>
+          <div class="hero__stat" role="listitem">
+            <strong class="hero__stat-num">+150</strong>
+            <span class="hero__stat-label">Empresas atendidas</span>
+          </div>
+          <div class="hero__stat-divider" aria-hidden="true"></div>
+          <div class="hero__stat" role="listitem">
+            <strong class="hero__stat-num">100%</strong>
+            <span class="hero__stat-label">Atendimento humano</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Scroll indicator -->
+      <div class="hero__scroll" aria-label="Role para baixo">
+        <div class="hero__scroll-line" aria-hidden="true"></div>
+      </div>
+    </section>
+
+    <!-- =============================================
+         BENEFÍCIOS / DIFERENCIAIS
+    ============================================= -->
+    <section class="benefits" id="beneficios" aria-label="Nossos diferenciais">
+      <div class="container">
+        <ul class="benefits__list" role="list" aria-label="Lista de diferenciais">
+          <li class="benefits__item reveal">
+            <div class="benefits__icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+                <path d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z"/>
+              </svg>
+            </div>
+            <span>Produtos com garantia</span>
+          </li>
+          <li class="benefits__item reveal">
+            <div class="benefits__icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+                <path d="M7 7h.01M7 3h5c.512 0 1.024.195 1.414.586l7 7a2 2 0 010 2.828l-7 7a2 2 0 01-2.828 0l-7-7A1.994 1.994 0 013 12V7a4 4 0 014-4z"/>
+              </svg>
+            </div>
+            <span>Personalização completa</span>
+          </li>
+          <li class="benefits__item reveal">
+            <div class="benefits__icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+                <path d="M13 16V6a1 1 0 00-1-1H4a1 1 0 00-1 1v10a1 1 0 001 1h1m8-1a1 1 0 01-1 1H9m4-1V8a1 1 0 011-1h2.586a1 1 0 01.707.293l3.414 3.414a1 1 0 01.293.707V16a1 1 0 01-1 1h-1m-6-1a1 1 0 001 1h1M5 17a2 2 0 104 0m-4 0a2 2 0 114 0m6 0a2 2 0 104 0m-4 0a2 2 0 114 0"/>
+              </svg>
+            </div>
+            <span>Envio para todo Brasil</span>
+          </li>
+          <li class="benefits__item reveal">
+            <div class="benefits__icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+                <path d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/>
+              </svg>
+            </div>
+            <span>Resposta em minutos</span>
+          </li>
+          <li class="benefits__item reveal">
+            <div class="benefits__icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+                <path d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"/>
+              </svg>
+            </div>
+            <span>Compra 100% segura</span>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- =============================================
+         CATEGORIAS
+    ============================================= -->
+    <section class="categories" id="categorias" aria-labelledby="categorias-title">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="section-eyebrow">O que oferecemos</span>
+          <h2 class="section-title" id="categorias-title">Nossas categorias</h2>
+          <p class="section-desc">Do térmico ao tecnológico, temos o produto certo para cada momento da sua vida.</p>
+        </div>
+
+        <div class="categories__grid">
+
+          <!-- Categoria Térmica -->
+          <article class="category-card reveal" style="--delay:0.1s">
+            <div class="category-card__visual category-card__visual--thermal" aria-hidden="true">
+              <svg viewBox="0 0 120 120" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                <!-- Garrafa térmica estilizada -->
+                <rect x="40" y="15" width="40" height="8" rx="4" fill="rgba(255,255,255,0.3)"/>
+                <rect x="35" y="22" width="50" height="80" rx="12" fill="rgba(255,255,255,0.15)" stroke="rgba(255,255,255,0.4)" stroke-width="1.5"/>
+                <rect x="38" y="28" width="44" height="68" rx="10" fill="rgba(255,255,255,0.08)"/>
+                <line x1="45" y1="50" x2="75" y2="50" stroke="rgba(255,255,255,0.3)" stroke-width="1"/>
+                <line x1="45" y1="60" x2="75" y2="60" stroke="rgba(255,255,255,0.2)" stroke-width="1"/>
+                <path d="M52 40 Q60 35 68 40" stroke="rgba(251,146,60,0.8)" stroke-width="2" fill="none"/>
+              </svg>
+            </div>
+            <div class="category-card__body">
+              <h3 class="category-card__title">Linha Térmica</h3>
+              <p class="category-card__desc">Garrafas e copos que mantêm sua bebida na temperatura ideal por horas. Duráveis, elegantes e perfeitos para qualquer rotina.</p>
+              <a href="#produtos" class="btn btn--ghost btn--sm" aria-label="Ver produtos da Linha Térmica">
+                Ver produtos
+                <svg class="btn__icon" aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+              </a>
+            </div>
+          </article>
+
+          <!-- Categoria Brindes -->
+          <article class="category-card reveal" style="--delay:0.2s">
+            <div class="category-card__visual category-card__visual--corporate" aria-hidden="true">
+              <svg viewBox="0 0 120 120" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                <!-- Caixa de presente estilizada -->
+                <rect x="25" y="55" width="70" height="45" rx="4" fill="rgba(255,255,255,0.15)" stroke="rgba(255,255,255,0.4)" stroke-width="1.5"/>
+                <rect x="22" y="45" width="76" height="14" rx="4" fill="rgba(255,255,255,0.2)" stroke="rgba(255,255,255,0.4)" stroke-width="1.5"/>
+                <line x1="60" y1="45" x2="60" y2="100" stroke="rgba(251,146,60,0.8)" stroke-width="2"/>
+                <path d="M60 45 Q50 30 40 35 Q30 40 60 45" fill="rgba(251,146,60,0.4)" stroke="rgba(251,146,60,0.8)" stroke-width="1.5"/>
+                <path d="M60 45 Q70 30 80 35 Q90 40 60 45" fill="rgba(251,146,60,0.4)" stroke="rgba(251,146,60,0.8)" stroke-width="1.5"/>
+              </svg>
+            </div>
+            <div class="category-card__body">
+              <h3 class="category-card__title">Brindes Corporativos</h3>
+              <p class="category-card__desc">Presentes empresariais que fortalecem sua marca. Kits completos para eventos, onboarding e campanhas de reconhecimento.</p>
+              <a href="#brindes" class="btn btn--ghost btn--sm" aria-label="Ver brindes corporativos">
+                Solicitar orçamento
+                <svg class="btn__icon" aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+              </a>
+            </div>
+          </article>
+
+          <!-- Categoria Eletrônicos -->
+          <article class="category-card reveal" style="--delay:0.3s">
+            <div class="category-card__visual category-card__visual--electronics" aria-hidden="true">
+              <svg viewBox="0 0 120 120" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                <!-- Smartwatch estilizado -->
+                <rect x="42" y="20" width="36" height="8" rx="4" fill="rgba(255,255,255,0.2)"/>
+                <rect x="42" y="92" width="36" height="8" rx="4" fill="rgba(255,255,255,0.2)"/>
+                <rect x="30" y="30" width="60" height="60" rx="14" fill="rgba(255,255,255,0.15)" stroke="rgba(255,255,255,0.4)" stroke-width="1.5"/>
+                <rect x="35" y="35" width="50" height="50" rx="10" fill="rgba(255,255,255,0.08)"/>
+                <circle cx="60" cy="60" r="18" fill="rgba(255,255,255,0.05)" stroke="rgba(251,146,60,0.6)" stroke-width="1"/>
+                <line x1="60" y1="52" x2="60" y2="60" stroke="white" stroke-width="2" stroke-linecap="round"/>
+                <line x1="60" y1="60" x2="66" y2="64" stroke="rgba(251,146,60,0.9)" stroke-width="1.5" stroke-linecap="round"/>
+              </svg>
+            </div>
+            <div class="category-card__body">
+              <h3 class="category-card__title">Eletrônicos</h3>
+              <p class="category-card__desc">Smartwatches, fones, caixas de som e muito mais. Tecnologia acessível para conectar você ao que importa.</p>
+              <a href="#produtos" class="btn btn--ghost btn--sm" aria-label="Ver eletrônicos">
+                Explorar
+                <svg class="btn__icon" aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+              </a>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- =============================================
+         PRODUTOS EM DESTAQUE
+    ============================================= -->
+    <section class="products" id="produtos" aria-labelledby="produtos-title">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="section-eyebrow">Catálogo</span>
+          <h2 class="section-title" id="produtos-title">Produtos em destaque</h2>
+          <p class="section-desc">Cada produto foi selecionado para oferecer a melhor experiência. Clique em qualquer item para falar conosco.</p>
+        </div>
+
+        <!-- Filtros -->
+        <div class="products__filters reveal" role="group" aria-label="Filtros de produtos">
+          <button class="filter-btn filter-btn--active" data-filter="all" aria-pressed="true">Todos</button>
+          <button class="filter-btn" data-filter="thermal" aria-pressed="false">Linha Térmica</button>
+          <button class="filter-btn" data-filter="electronics" aria-pressed="false">Eletrônicos</button>
+          <button class="filter-btn" data-filter="corporate" aria-pressed="false">Brindes</button>
+        </div>
+
+        <!-- Grid de produtos -->
+        <div class="products__grid" id="productsGrid" role="list" aria-label="Lista de produtos">
+
+          <!-- Produto 1 -->
+          <article class="product-card reveal" data-category="thermal" role="listitem">
+            <div class="product-card__badge" aria-label="Mais vendido">⭐ Mais Vendido</div>
+            <div class="product-card__img-wrap">
+              <div class="product-card__img product-card__img--thermal-bottle" aria-hidden="true">
+                <svg viewBox="0 0 200 260" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Garrafa Térmica Inox Premium 1L">
+                  <rect x="70" y="5" width="60" height="16" rx="8" fill="#334155"/>
+                  <rect x="60" y="20" width="80" height="220" rx="20" fill="url(#grad1)"/>
+                  <rect x="65" y="25" width="70" height="208" rx="16" fill="url(#grad2)"/>
+                  <line x1="78" y1="120" x2="122" y2="120" stroke="rgba(255,255,255,0.15)" stroke-width="1"/>
+                  <text x="100" y="105" text-anchor="middle" fill="rgba(255,255,255,0.5)" font-size="11" font-family="Inter">AC</text>
+                  <text x="100" y="140" text-anchor="middle" fill="rgba(255,255,255,0.3)" font-size="8" font-family="Inter">LOJA VIRTUAL</text>
+                  <defs>
+                    <linearGradient id="grad1" x1="60" y1="0" x2="140" y2="0" gradientUnits="userSpaceOnUse">
+                      <stop offset="0%" stop-color="#1e293b"/>
+                      <stop offset="50%" stop-color="#334155"/>
+                      <stop offset="100%" stop-color="#1e293b"/>
+                    </linearGradient>
+                    <linearGradient id="grad2" x1="65" y1="0" x2="135" y2="0" gradientUnits="userSpaceOnUse">
+                      <stop offset="0%" stop-color="#0f172a"/>
+                      <stop offset="30%" stop-color="#1e293b"/>
+                      <stop offset="70%" stop-color="#334155"/>
+                      <stop offset="100%" stop-color="#1e293b"/>
+                    </linearGradient>
+                  </defs>
+                </svg>
+              </div>
+            </div>
+            <div class="product-card__body">
+              <span class="product-card__cat">Linha Térmica</span>
+              <h3 class="product-card__name">Garrafa Térmica Inox Premium 1L</h3>
+              <p class="product-card__desc">Mantenha sua bebida gelada por até 24h ou quente por 12h. Aço inox de grau alimentício, design slim e tampa com trava.</p>
+              <div class="product-card__price-row">
+                <span class="product-card__price-old" aria-label="Preço antigo">R$&nbsp;149,90</span>
+                <strong class="product-card__price" aria-label="Preço atual">R$&nbsp;119,90</strong>
+              </div>
+              <a href="https://wa.me/5516992347993?text=Ol%C3%A1!%20Tenho%20interesse%20na%20Garrafa%20T%C3%A9rmica%20Inox%20Premium%201L."
+                 class="btn btn--whatsapp btn--full"
+                 target="_blank" rel="noopener noreferrer"
+                 aria-label="Comprar Garrafa Térmica Inox Premium 1L pelo WhatsApp">
+                <svg class="btn__icon" aria-hidden="true" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+                Comprar pelo WhatsApp
+              </a>
+            </div>
+          </article>
+
+          <!-- Produto 2 -->
+          <article class="product-card reveal" data-category="thermal" role="listitem">
+            <div class="product-card__img-wrap">
+              <div class="product-card__img product-card__img--cup" aria-hidden="true">
+                <svg viewBox="0 0 200 220" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Copo Térmico 500ml Personalizado">
+                  <path d="M55 30 L65 200 Q100 210 135 200 L145 30 Z" fill="url(#cupGrad)"/>
+                  <path d="M55 30 Q100 20 145 30" fill="none" stroke="rgba(255,255,255,0.3)" stroke-width="2"/>
+                  <ellipse cx="100" cy="30" rx="45" ry="10" fill="url(#cupTop)"/>
+                  <path d="M62 80 Q100 75 138 80" stroke="rgba(255,255,255,0.2)" stroke-width="1" fill="none"/>
+                  <path d="M64 130 Q100 125 136 130" stroke="rgba(255,255,255,0.2)" stroke-width="1" fill="none"/>
+                  <text x="100" y="110" text-anchor="middle" fill="rgba(255,255,255,0.6)" font-size="14" font-family="Inter" font-weight="600">AC</text>
+                  <defs>
+                    <linearGradient id="cupGrad" x1="55" y1="100" x2="145" y2="100" gradientUnits="userSpaceOnUse">
+                      <stop offset="0%" stop-color="#1d4ed8"/>
+                      <stop offset="50%" stop-color="#2563eb"/>
+                      <stop offset="100%" stop-color="#1d4ed8"/>
+                    </linearGradient>
+                    <linearGradient id="cupTop" x1="55" y1="30" x2="145" y2="30" gradientUnits="userSpaceOnUse">
+                      <stop offset="0%" stop-color="#1e40af"/>
+                      <stop offset="100%" stop-color="#3b82f6"/>
+                    </linearGradient>
+                  </defs>
+                </svg>
+              </div>
+            </div>
+            <div class="product-card__body">
+              <span class="product-card__cat">Linha Térmica</span>
+              <h3 class="product-card__name">Copo Térmico 500ml Personalizado</h3>
+              <p class="product-card__desc">Perfeito para o dia a dia, com seu nome ou logo gravado a laser. Tampa rosqueável antivazamento. Mantém bebidas até 8h.</p>
+              <div class="product-card__price-row">
+                <strong class="product-card__price">R$&nbsp;79,90</strong>
+              </div>
+              <a href="https://wa.me/5516992347993?text=Ol%C3%A1!%20Tenho%20interesse%20no%20Copo%20T%C3%A9rmico%20500ml%20Personalizado."
+                 class="btn btn--whatsapp btn--full"
+                 target="_blank" rel="noopener noreferrer"
+                 aria-label="Comprar Copo Térmico 500ml pelo WhatsApp">
+                <svg class="btn__icon" aria-hidden="true" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+                Comprar pelo WhatsApp
+              </a>
+            </div>
+          </article>
+
+          <!-- Produto 3 -->
+          <article class="product-card reveal" data-category="electronics" role="listitem">
+            <div class="product-card__badge product-card__badge--new" aria-label="Novo">Novo</div>
+            <div class="product-card__img-wrap">
+              <div class="product-card__img product-card__img--watch" aria-hidden="true">
+                <svg viewBox="0 0 200 240" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Smartwatch Pro Series">
+                  <rect x="82" y="10" width="36" height="30" rx="6" fill="#1e293b"/>
+                  <rect x="82" y="200" width="36" height="30" rx="6" fill="#1e293b"/>
+                  <rect x="40" y="40" width="120" height="160" rx="28" fill="url(#watchGrad)"/>
+                  <rect x="46" y="46" width="108" height="148" rx="22" fill="#0f172a"/>
+                  <rect x="50" y="50" width="100" height="140" rx="18" fill="url(#screenGrad)"/>
+                  <!-- Esfera do relógio -->
+                  <text x="100" y="100" text-anchor="middle" fill="rgba(255,255,255,0.8)" font-size="20" font-family="Inter" font-weight="700">10:24</text>
+                  <text x="100" y="120" text-anchor="middle" fill="rgba(255,255,255,0.4)" font-size="9" font-family="Inter">TER, 10 JUN</text>
+                  <!-- Barra de bateria -->
+                  <rect x="70" y="145" width="60" height="6" rx="3" fill="rgba(255,255,255,0.1)"/>
+                  <rect x="70" y="145" width="42" height="6" rx="3" fill="#22c55e"/>
+                  <!-- Botão lateral -->
+                  <rect x="158" y="90" width="6" height="20" rx="3" fill="#334155"/>
+                  <defs>
+                    <linearGradient id="watchGrad" x1="40" y1="0" x2="160" y2="0" gradientUnits="userSpaceOnUse">
+                      <stop offset="0%" stop-color="#1e293b"/>
+                      <stop offset="50%" stop-color="#475569"/>
+                      <stop offset="100%" stop-color="#1e293b"/>
+                    </linearGradient>
+                    <linearGradient id="screenGrad" x1="50" y1="50" x2="150" y2="190" gradientUnits="userSpaceOnUse">
+                      <stop offset="0%" stop-color="#0ea5e9"/>
+                      <stop offset="50%" stop-color="#0f172a"/>
+                      <stop offset="100%" stop-color="#1e293b"/>
+                    </linearGradient>
+                  </defs>
+                </svg>
+              </div>
+            </div>
+            <div class="product-card__body">
+              <span class="product-card__cat">Eletrônicos</span>
+              <h3 class="product-card__name">Smartwatch Pro Series</h3>
+              <p class="product-card__desc">Monitor cardíaco, GPS integrado, notificações e bateria de 7 dias. Seu personal trainer no pulso, 24 horas por dia.</p>
+              <div class="product-card__price-row">
+                <span class="product-card__price-old">R$&nbsp;399,90</span>
+                <strong class="product-card__price">R$&nbsp;299,90</strong>
+              </div>
+              <a href="https://wa.me/5516992347993?text=Ol%C3%A1!%20Tenho%20interesse%20no%20Smartwatch%20Pro%20Series."
+                 class="btn btn--whatsapp btn--full"
+                 target="_blank" rel="noopener noreferrer"
+                 aria-label="Comprar Smartwatch Pro Series pelo WhatsApp">
+                <svg class="btn__icon" aria-hidden="true" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+                Comprar pelo WhatsApp
+              </a>
+            </div>
+          </article>
+
+          <!-- Produto 4 -->
+          <article class="product-card reveal" data-category="electronics" role="listitem">
+            <div class="product-card__img-wrap">
+              <div class="product-card__img product-card__img--speaker" aria-hidden="true">
+                <svg viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Caixa de Som Bluetooth 360°">
+                  <ellipse cx="100" cy="100" rx="70" ry="70" fill="url(#spkGrad)"/>
+                  <ellipse cx="100" cy="100" rx="60" ry="60" fill="#0f172a"/>
+                  <circle cx="100" cy="100" r="40" fill="url(#coneGrad)" stroke="rgba(255,255,255,0.1)" stroke-width="1"/>
+                  <circle cx="100" cy="100" r="25" fill="#0f172a"/>
+                  <circle cx="100" cy="100" r="15" fill="url(#centerGrad)"/>
+                  <circle cx="100" cy="100" r="5" fill="#fb923c"/>
+                  <!-- Linhas de som -->
+                  <path d="M155 70 Q165 85 165 100 Q165 115 155 130" stroke="rgba(251,146,60,0.4)" stroke-width="2" fill="none" stroke-linecap="round"/>
+                  <path d="M170 55 Q185 75 185 100 Q185 125 170 145" stroke="rgba(251,146,60,0.2)" stroke-width="1.5" fill="none" stroke-linecap="round"/>
+                  <defs>
+                    <radialGradient id="spkGrad" cx="40%" cy="35%">
+                      <stop offset="0%" stop-color="#334155"/>
+                      <stop offset="100%" stop-color="#1e293b"/>
+                    </radialGradient>
+                    <radialGradient id="coneGrad">
+                      <stop offset="0%" stop-color="#334155"/>
+                      <stop offset="100%" stop-color="#1e293b"/>
+                    </radialGradient>
+                    <radialGradient id="centerGrad">
+                      <stop offset="0%" stop-color="#475569"/>
+                      <stop offset="100%" stop-color="#1e293b"/>
+                    </radialGradient>
+                  </defs>
+                </svg>
+              </div>
+            </div>
+            <div class="product-card__body">
+              <span class="product-card__cat">Eletrônicos</span>
+              <h3 class="product-card__name">Caixa de Som Bluetooth 360°</h3>
+              <p class="product-card__desc">Som potente e cristalino em 360 graus. À prova d'água, bateria de 12h e conexão estável até 10 metros. Leve para qualquer lugar.</p>
+              <div class="product-card__price-row">
+                <span class="product-card__price-old">R$&nbsp;249,90</span>
+                <strong class="product-card__price">R$&nbsp;189,90</strong>
+              </div>
+              <a href="https://wa.me/5516992347993?text=Ol%C3%A1!%20Tenho%20interesse%20na%20Caixa%20de%20Som%20Bluetooth%20360."
+                 class="btn btn--whatsapp btn--full"
+                 target="_blank" rel="noopener noreferrer"
+                 aria-label="Comprar Caixa de Som Bluetooth pelo WhatsApp">
+                <svg class="btn__icon" aria-hidden="true" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+                Comprar pelo WhatsApp
+              </a>
+            </div>
+          </article>
+
+          <!-- Produto 5 -->
+          <article class="product-card reveal" data-category="electronics" role="listitem">
+            <div class="product-card__img-wrap">
+              <div class="product-card__img product-card__img--powerbank" aria-hidden="true">
+                <svg viewBox="0 0 200 160" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Power Bank 20.000mAh">
+                  <rect x="20" y="40" width="155" height="80" rx="16" fill="url(#pbGrad)"/>
+                  <rect x="175" y="68" width="8" height="24" rx="4" fill="#334155"/>
+                  <rect x="26" y="46" width="143" height="68" rx="12" fill="#0f172a"/>
+                  <!-- Barras de carga -->
+                  <rect x="38" y="63" width="18" height="34" rx="4" fill="#22c55e"/>
+                  <rect x="62" y="63" width="18" height="34" rx="4" fill="#22c55e"/>
+                  <rect x="86" y="63" width="18" height="34" rx="4" fill="#22c55e"/>
+                  <rect x="110" y="63" width="18" height="34" rx="4" fill="#fb923c"/>
+                  <!-- Ícone raio -->
+                  <path d="M140 58 L130 82 L137 82 L127 102 L145 75 L138 75 Z" fill="rgba(251,146,60,0.8)"/>
+                  <defs>
+                    <linearGradient id="pbGrad" x1="20" y1="80" x2="175" y2="80" gradientUnits="userSpaceOnUse">
+                      <stop offset="0%" stop-color="#1e293b"/>
+                      <stop offset="50%" stop-color="#334155"/>
+                      <stop offset="100%" stop-color="#1e293b"/>
+                    </linearGradient>
+                  </defs>
+                </svg>
+              </div>
+            </div>
+            <div class="product-card__body">
+              <span class="product-card__cat">Eletrônicos</span>
+              <h3 class="product-card__name">Power Bank 20.000mAh</h3>
+              <p class="product-card__desc">Carregue seu celular até 5 vezes sem precisar de tomada. Carga rápida 22W, 3 saídas USB e display de bateria. Essencial para viagens.</p>
+              <div class="product-card__price-row">
+                <strong class="product-card__price">R$&nbsp;159,90</strong>
+              </div>
+              <a href="https://wa.me/5516992347993?text=Ol%C3%A1!%20Tenho%20interesse%20no%20Power%20Bank%2020.000mAh."
+                 class="btn btn--whatsapp btn--full"
+                 target="_blank" rel="noopener noreferrer"
+                 aria-label="Comprar Power Bank pelo WhatsApp">
+                <svg class="btn__icon" aria-hidden="true" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+                Comprar pelo WhatsApp
+              </a>
+            </div>
+          </article>
+
+          <!-- Produto 6 -->
+          <article class="product-card reveal" data-category="electronics" role="listitem">
+            <div class="product-card__img-wrap">
+              <div class="product-card__img product-card__img--earbuds" aria-hidden="true">
+                <svg viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Fone Bluetooth TWS Pro">
+                  <!-- Case -->
+                  <rect x="50" y="90" width="100" height="70" rx="20" fill="url(#caseGrad)"/>
+                  <rect x="54" y="94" width="92" height="62" rx="16" fill="#0f172a"/>
+                  <!-- Fones -->
+                  <ellipse cx="80" cy="60" rx="16" ry="22" fill="url(#earGrad)"/>
+                  <ellipse cx="120" cy="60" rx="16" ry="22" fill="url(#earGrad)"/>
+                  <ellipse cx="80" cy="60" rx="9" ry="13" fill="#0f172a"/>
+                  <ellipse cx="120" cy="60" rx="9" ry="13" fill="#0f172a"/>
+                  <circle cx="80" cy="60" r="4" fill="#fb923c"/>
+                  <circle cx="120" cy="60" r="4" fill="#fb923c"/>
+                  <!-- LED case -->
+                  <circle cx="100" cy="148" r="4" fill="#22c55e"/>
+                  <defs>
+                    <linearGradient id="caseGrad" x1="50" y1="125" x2="150" y2="125" gradientUnits="userSpaceOnUse">
+                      <stop offset="0%" stop-color="#1e293b"/>
+                      <stop offset="50%" stop-color="#475569"/>
+                      <stop offset="100%" stop-color="#1e293b"/>
+                    </linearGradient>
+                    <radialGradient id="earGrad">
+                      <stop offset="0%" stop-color="#334155"/>
+                      <stop offset="100%" stop-color="#1e293b"/>
+                    </radialGradient>
+                  </defs>
+                </svg>
+              </div>
+            </div>
+            <div class="product-card__body">
+              <span class="product-card__cat">Eletrônicos</span>
+              <h3 class="product-card__name">Fone Bluetooth TWS Pro</h3>
+              <p class="product-card__desc">Cancelamento ativo de ruído, 30h de autonomia com case e som que envolve completamente. Para quem leva a música a sério.</p>
+              <div class="product-card__price-row">
+                <span class="product-card__price-old">R$&nbsp;299,90</span>
+                <strong class="product-card__price">R$&nbsp;219,90</strong>
+              </div>
+              <a href="https://wa.me/5516992347993?text=Ol%C3%A1!%20Tenho%20interesse%20no%20Fone%20Bluetooth%20TWS%20Pro."
+                 class="btn btn--whatsapp btn--full"
+                 target="_blank" rel="noopener noreferrer"
+                 aria-label="Comprar Fone Bluetooth pelo WhatsApp">
+                <svg class="btn__icon" aria-hidden="true" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+                Comprar pelo WhatsApp
+              </a>
+            </div>
+          </article>
+
+          <!-- Produto 7 -->
+          <article class="product-card reveal" data-category="corporate" role="listitem">
+            <div class="product-card__badge product-card__badge--corp" aria-label="Corporativo">Corporativo</div>
+            <div class="product-card__img-wrap">
+              <div class="product-card__img product-card__img--kit" aria-hidden="true">
+                <svg viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Kit Corporativo Premium">
+                  <!-- Caixa -->
+                  <rect x="30" y="80" width="140" height="100" rx="8" fill="url(#kitBox)"/>
+                  <rect x="30" y="80" width="140" height="20" rx="8" fill="url(#kitLid)"/>
+                  <!-- Laço -->
+                  <line x1="100" y1="80" x2="100" y2="180" stroke="rgba(251,146,60,0.7)" stroke-width="3"/>
+                  <line x1="30" y1="120" x2="170" y2="120" stroke="rgba(251,146,60,0.7)" stroke-width="3"/>
+                  <!-- Ícones produtos dentro -->
+                  <rect x="50" y="110" width="30" height="55" rx="6" fill="rgba(255,255,255,0.1)" stroke="rgba(255,255,255,0.2)" stroke-width="1"/>
+                  <rect x="120" y="110" width="30" height="40" rx="6" fill="rgba(255,255,255,0.1)" stroke="rgba(255,255,255,0.2)" stroke-width="1"/>
+                  <defs>
+                    <linearGradient id="kitBox" x1="30" y1="130" x2="170" y2="130" gradientUnits="userSpaceOnUse">
+                      <stop offset="0%" stop-color="#1e3a5f"/>
+                      <stop offset="50%" stop-color="#1d4ed8"/>
+                      <stop offset="100%" stop-color="#1e3a5f"/>
+                    </linearGradient>
+                    <linearGradient id="kitLid" x1="30" y1="90" x2="170" y2="90" gradientUnits="userSpaceOnUse">
+                      <stop offset="0%" stop-color="#1e40af"/>
+                      <stop offset="100%" stop-color="#2563eb"/>
+                    </linearGradient>
+                  </defs>
+                </svg>
+              </div>
+            </div>
+            <div class="product-card__body">
+              <span class="product-card__cat">Brindes Corporativos</span>
+              <h3 class="product-card__name">Kit Corporativo Premium</h3>
+              <p class="product-card__desc">Garrafa térmica + copo + squeeze personalizados com a sua marca. Perfeito para onboarding, eventos e campanhas de reconhecimento.</p>
+              <div class="product-card__price-row">
+                <strong class="product-card__price">A partir de R$&nbsp;89,90/un</strong>
+              </div>
+              <a href="https://wa.me/5516992347993?text=Ol%C3%A1!%20Tenho%20interesse%20no%20Kit%20Corporativo%20Premium.%20Gostaria%20de%20um%20or%C3%A7amento."
+                 class="btn btn--whatsapp btn--full"
+                 target="_blank" rel="noopener noreferrer"
+                 aria-label="Solicitar orçamento do Kit Corporativo pelo WhatsApp">
+                <svg class="btn__icon" aria-hidden="true" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+                Solicitar orçamento
+              </a>
+            </div>
+          </article>
+
+          <!-- Produto 8 -->
+          <article class="product-card reveal" data-category="thermal" role="listitem">
+            <div class="product-card__img-wrap">
+              <div class="product-card__img product-card__img--squeeze" aria-hidden="true">
+                <svg viewBox="0 0 180 280" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Squeeze Sport 750ml">
+                  <ellipse cx="90" cy="30" rx="28" ry="8" fill="url(#sqTop)"/>
+                  <path d="M90 10 Q90 5 90 10" stroke="none"/>
+                  <rect x="65" y="5" width="50" height="16" rx="8" fill="#166534"/>
+                  <path d="M62 38 Q62 260 72 270 Q90 275 108 270 Q118 260 118 38 Z" fill="url(#sqBody)"/>
+                  <path d="M66 80 Q90 75 114 80" stroke="rgba(255,255,255,0.3)" stroke-width="1" fill="none"/>
+                  <path d="M66 160 Q90 155 114 160" stroke="rgba(255,255,255,0.2)" stroke-width="1" fill="none"/>
+                  <text x="90" y="130" text-anchor="middle" fill="rgba(255,255,255,0.7)" font-size="13" font-family="Inter" font-weight="700">750ml</text>
+                  <defs>
+                    <linearGradient id="sqTop" x1="62" y1="30" x2="118" y2="30" gradientUnits="userSpaceOnUse">
+                      <stop offset="0%" stop-color="#14532d"/>
+                      <stop offset="100%" stop-color="#16a34a"/>
+                    </linearGradient>
+                    <linearGradient id="sqBody" x1="62" y1="150" x2="118" y2="150" gradientUnits="userSpaceOnUse">
+                      <stop offset="0%" stop-color="#15803d"/>
+                      <stop offset="50%" stop-color="#22c55e"/>
+                      <stop offset="100%" stop-color="#15803d"/>
+                    </linearGradient>
+                  </defs>
+                </svg>
+              </div>
+            </div>
+            <div class="product-card__body">
+              <span class="product-card__cat">Linha Térmica</span>
+              <h3 class="product-card__name">Squeeze Sport 750ml</h3>
+              <p class="product-card__desc">Feito para quem não para. Plástico livre de BPA, bico flip-top, alça ergonômica e personalização com seu nome ou logo da academia.</p>
+              <div class="product-card__price-row">
+                <strong class="product-card__price">R$&nbsp;49,90</strong>
+              </div>
+              <a href="https://wa.me/5516992347993?text=Ol%C3%A1!%20Tenho%20interesse%20no%20Squeeze%20Sport%20750ml."
+                 class="btn btn--whatsapp btn--full"
+                 target="_blank" rel="noopener noreferrer"
+                 aria-label="Comprar Squeeze Sport pelo WhatsApp">
+                <svg class="btn__icon" aria-hidden="true" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+                Comprar pelo WhatsApp
+              </a>
+            </div>
+          </article>
+
+          <!-- Produto 9 -->
+          <article class="product-card reveal" data-category="electronics" role="listitem">
+            <div class="product-card__img-wrap">
+              <div class="product-card__img product-card__img--charger" aria-hidden="true">
+                <svg viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Carregador Turbo 65W GaN">
+                  <rect x="60" y="40" width="80" height="100" rx="14" fill="url(#charGrad)"/>
+                  <rect x="65" y="45" width="70" height="90" rx="10" fill="#0f172a"/>
+                  <!-- Pinos -->
+                  <rect x="82" y="138" width="10" height="22" rx="5" fill="#94a3b8"/>
+                  <rect x="108" y="138" width="10" height="22" rx="5" fill="#94a3b8"/>
+                  <!-- Tela -->
+                  <rect x="70" y="55" width="60" height="35" rx="6" fill="rgba(255,255,255,0.05)" stroke="rgba(255,255,255,0.1)" stroke-width="1"/>
+                  <text x="100" y="74" text-anchor="middle" fill="#fb923c" font-size="12" font-family="Inter" font-weight="700">65W</text>
+                  <!-- USB ports -->
+                  <rect x="75" y="100" width="22" height="14" rx="4" fill="rgba(255,255,255,0.08)" stroke="rgba(255,255,255,0.2)" stroke-width="1"/>
+                  <rect x="103" y="100" width="22" height="14" rx="4" fill="rgba(255,255,255,0.08)" stroke="rgba(255,255,255,0.2)" stroke-width="1"/>
+                  <defs>
+                    <linearGradient id="charGrad" x1="60" y1="90" x2="140" y2="90" gradientUnits="userSpaceOnUse">
+                      <stop offset="0%" stop-color="#1e293b"/>
+                      <stop offset="50%" stop-color="#334155"/>
+                      <stop offset="100%" stop-color="#1e293b"/>
+                    </linearGradient>
+                  </defs>
+                </svg>
+              </div>
+            </div>
+            <div class="product-card__body">
+              <span class="product-card__cat">Eletrônicos</span>
+              <h3 class="product-card__name">Carregador Turbo 65W GaN</h3>
+              <p class="product-card__desc">Carregue notebook, tablet e celular ao mesmo tempo. Tecnologia GaN mais eficiente, compacto e não esquenta. De 0 a 50% em 20 minutos.</p>
+              <div class="product-card__price-row">
+                <strong class="product-card__price">R$&nbsp;129,90</strong>
+              </div>
+              <a href="https://wa.me/5516992347993?text=Ol%C3%A1!%20Tenho%20interesse%20no%20Carregador%20Turbo%2065W%20GaN."
+                 class="btn btn--whatsapp btn--full"
+                 target="_blank" rel="noopener noreferrer"
+                 aria-label="Comprar Carregador Turbo pelo WhatsApp">
+                <svg class="btn__icon" aria-hidden="true" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+                Comprar pelo WhatsApp
+              </a>
+            </div>
+          </article>
+
+          <!-- Produto 10 -->
+          <article class="product-card reveal" data-category="thermal" role="listitem">
+            <div class="product-card__img-wrap">
+              <div class="product-card__img product-card__img--mug" aria-hidden="true">
+                <svg viewBox="0 0 200 220" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Caneca Térmica Cerâmica 350ml">
+                  <path d="M50 60 Q50 200 100 205 Q150 200 150 60 Z" fill="url(#mugGrad)"/>
+                  <path d="M50 60 Q100 50 150 60" fill="none" stroke="rgba(255,255,255,0.3)" stroke-width="2"/>
+                  <!-- Alça -->
+                  <path d="M150 85 Q175 85 175 115 Q175 145 150 145" fill="none" stroke="url(#handleGrad)" stroke-width="10" stroke-linecap="round"/>
+                  <!-- Vapor -->
+                  <path d="M80 30 Q82 15 80 5" stroke="rgba(255,255,255,0.3)" stroke-width="2" fill="none" stroke-linecap="round"/>
+                  <path d="M100 28 Q102 12 100 2" stroke="rgba(255,255,255,0.4)" stroke-width="2" fill="none" stroke-linecap="round"/>
+                  <path d="M120 30 Q122 15 120 5" stroke="rgba(255,255,255,0.3)" stroke-width="2" fill="none" stroke-linecap="round"/>
+                  <text x="100" y="138" text-anchor="middle" fill="rgba(255,255,255,0.6)" font-size="11" font-family="Inter">AC Loja</text>
+                  <defs>
+                    <linearGradient id="mugGrad" x1="50" y1="120" x2="150" y2="120" gradientUnits="userSpaceOnUse">
+                      <stop offset="0%" stop-color="#78350f"/>
+                      <stop offset="50%" stop-color="#d97706"/>
+                      <stop offset="100%" stop-color="#78350f"/>
+                    </linearGradient>
+                    <linearGradient id="handleGrad" x1="150" y1="115" x2="175" y2="115" gradientUnits="userSpaceOnUse">
+                      <stop offset="0%" stop-color="#92400e"/>
+                      <stop offset="100%" stop-color="#b45309"/>
+                    </linearGradient>
+                  </defs>
+                </svg>
+              </div>
+            </div>
+            <div class="product-card__body">
+              <span class="product-card__cat">Linha Térmica</span>
+              <h3 class="product-card__name">Caneca Térmica Cerâmica 350ml</h3>
+              <p class="product-card__desc">O cheiro do café de manhã merece uma caneca à altura. Cerâmica de alta qualidade, mantém a temperatura e é ideal para presentes personalizados.</p>
+              <div class="product-card__price-row">
+                <strong class="product-card__price">R$&nbsp;59,90</strong>
+              </div>
+              <a href="https://wa.me/5516992347993?text=Ol%C3%A1!%20Tenho%20interesse%20na%20Caneca%20T%C3%A9rmica%20Cer%C3%A2mica%20350ml."
+                 class="btn btn--whatsapp btn--full"
+                 target="_blank" rel="noopener noreferrer"
+                 aria-label="Comprar Caneca Térmica pelo WhatsApp">
+                <svg class="btn__icon" aria-hidden="true" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+                Comprar pelo WhatsApp
+              </a>
+            </div>
+          </article>
+
+          <!-- Produto 11 -->
+          <article class="product-card reveal" data-category="corporate" role="listitem">
+            <div class="product-card__img-wrap">
+              <div class="product-card__img product-card__img--onboarding" aria-hidden="true">
+                <svg viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Kit Onboarding Colaborador">
+                  <!-- Bolsa/sacola -->
+                  <path d="M40 80 L30 180 Q100 190 170 180 L160 80 Z" fill="url(#bagGrad)"/>
+                  <path d="M40 80 Q100 70 160 80" fill="none" stroke="rgba(255,255,255,0.3)" stroke-width="2"/>
+                  <!-- Alças -->
+                  <path d="M65 80 Q65 40 100 40 Q135 40 135 80" fill="none" stroke="url(#strapGrad)" stroke-width="8" stroke-linecap="round"/>
+                  <!-- Itens visíveis -->
+                  <text x="100" y="140" text-anchor="middle" fill="rgba(255,255,255,0.7)" font-size="11" font-family="Inter" font-weight="600">WELCOME</text>
+                  <text x="100" y="155" text-anchor="middle" fill="rgba(255,255,255,0.4)" font-size="8" font-family="Inter">KIT</text>
+                  <defs>
+                    <linearGradient id="bagGrad" x1="30" y1="130" x2="170" y2="130" gradientUnits="userSpaceOnUse">
+                      <stop offset="0%" stop-color="#1e3a8a"/>
+                      <stop offset="50%" stop-color="#2563eb"/>
+                      <stop offset="100%" stop-color="#1e3a8a"/>
+                    </linearGradient>
+                    <linearGradient id="strapGrad" x1="65" y1="60" x2="135" y2="60" gradientUnits="userSpaceOnUse">
+                      <stop offset="0%" stop-color="#1d4ed8"/>
+                      <stop offset="100%" stop-color="#3b82f6"/>
+                    </linearGradient>
+                  </defs>
+                </svg>
+              </div>
+            </div>
+            <div class="product-card__body">
+              <span class="product-card__cat">Brindes Corporativos</span>
+              <h3 class="product-card__name">Kit Onboarding Colaborador</h3>
+              <p class="product-card__desc">Dê as boas-vindas da forma certa. Saco sacola personalizada, caderno, caneta, garrafa e crachá. Seu novo colaborador vai se sentir parte do time desde o primeiro dia.</p>
+              <div class="product-card__price-row">
+                <strong class="product-card__price">A partir de R$&nbsp;120,00/un</strong>
+              </div>
+              <a href="https://wa.me/5516992347993?text=Ol%C3%A1!%20Tenho%20interesse%20no%20Kit%20Onboarding%20para%20Colaborador.%20Gostaria%20de%20um%20or%C3%A7amento."
+                 class="btn btn--whatsapp btn--full"
+                 target="_blank" rel="noopener noreferrer"
+                 aria-label="Solicitar orçamento do Kit Onboarding pelo WhatsApp">
+                <svg class="btn__icon" aria-hidden="true" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+                Solicitar orçamento
+              </a>
+            </div>
+          </article>
+
+          <!-- Produto 12 -->
+          <article class="product-card reveal" data-category="thermal" role="listitem">
+            <div class="product-card__img-wrap">
+              <div class="product-card__img product-card__img--bottle-logo" aria-hidden="true">
+                <svg viewBox="0 0 180 280" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Garrafa com Logotipo Personalizado 600ml">
+                  <rect x="65" y="5" width="50" height="14" rx="7" fill="#1e293b"/>
+                  <rect x="55" y="18" width="70" height="230" rx="22" fill="url(#logoBottle)"/>
+                  <rect x="60" y="23" width="60" height="220" rx="18" fill="url(#logoBottleIn)"/>
+                  <!-- Área da logo -->
+                  <rect x="65" y="90" width="50" height="70" rx="8" fill="rgba(255,255,255,0.08)" stroke="rgba(255,255,255,0.15)" stroke-width="1" stroke-dasharray="3,3"/>
+                  <text x="90" y="122" text-anchor="middle" fill="rgba(255,255,255,0.5)" font-size="10" font-family="Inter">SUA</text>
+                  <text x="90" y="136" text-anchor="middle" fill="rgba(255,255,255,0.5)" font-size="10" font-family="Inter">LOGO</text>
+                  <defs>
+                    <linearGradient id="logoBottle" x1="55" y1="130" x2="125" y2="130" gradientUnits="userSpaceOnUse">
+                      <stop offset="0%" stop-color="#0c1628"/>
+                      <stop offset="50%" stop-color="#1e293b"/>
+                      <stop offset="100%" stop-color="#0c1628"/>
+                    </linearGradient>
+                    <linearGradient id="logoBottleIn" x1="60" y1="130" x2="120" y2="130" gradientUnits="userSpaceOnUse">
+                      <stop offset="0%" stop-color="#0f172a"/>
+                      <stop offset="30%" stop-color="#1e293b"/>
+                      <stop offset="70%" stop-color="#334155"/>
+                      <stop offset="100%" stop-color="#1e293b"/>
+                    </linearGradient>
+                  </defs>
+                </svg>
+              </div>
+            </div>
+            <div class="product-card__body">
+              <span class="product-card__cat">Brindes Corporativos</span>
+              <h3 class="product-card__name">Garrafa com Logotipo 600ml</h3>
+              <p class="product-card__desc">Sua marca no bolso de cada cliente, colaborador ou parceiro. Gravação a laser de alta precisão, aço inox premium e acabamento que impressiona.</p>
+              <div class="product-card__price-row">
+                <strong class="product-card__price">A partir de R$&nbsp;69,90/un</strong>
+              </div>
+              <a href="https://wa.me/5516992347993?text=Ol%C3%A1!%20Tenho%20interesse%20em%20Garrafas%20com%20Logotipo%20Personalizado.%20Gostaria%20de%20um%20or%C3%A7amento."
+                 class="btn btn--whatsapp btn--full"
+                 target="_blank" rel="noopener noreferrer"
+                 aria-label="Solicitar orçamento de Garrafa com Logo pelo WhatsApp">
+                <svg class="btn__icon" aria-hidden="true" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+                Solicitar orçamento
+              </a>
+            </div>
+          </article>
+
+        </div><!-- /products__grid -->
+
+        <!-- CTA Ver mais -->
+        <div class="products__cta reveal">
+          <a href="https://wa.me/5516992347993?text=Ol%C3%A1!%20Quero%20ver%20o%20cat%C3%A1logo%20completo%20da%20AC%20Loja%20Virtual."
+             class="btn btn--primary btn--lg"
+             target="_blank" rel="noopener noreferrer"
+             aria-label="Ver catálogo completo pelo WhatsApp">
+            Ver catálogo completo no WhatsApp
+            <svg class="btn__icon" aria-hidden="true" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+          </a>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- =============================================
+         BRINDES CORPORATIVOS
+    ============================================= -->
+    <section class="corporate" id="brindes" aria-labelledby="brindes-title">
+      <div class="container">
+        <div class="corporate__inner">
+          <div class="corporate__content reveal">
+            <span class="section-eyebrow section-eyebrow--light">Empresas &amp; Eventos</span>
+            <h2 class="section-title section-title--light" id="brindes-title">
+              Sua marca em cada<br />detalhe que importa.
+            </h2>
+            <p class="corporate__desc">
+              Brindes corporativos não são apenas objetos — são experiências que ligam sua marca às memórias mais positivas de clientes e colaboradores. Com a AC Loja Virtual, você personaliza do mínimo detalhe à grande entrega.
+            </p>
+            <ul class="corporate__list" role="list" aria-label="O que atendemos">
+              <li class="corporate__list-item">
+                <span class="corporate__check" aria-hidden="true">✓</span>
+                Eventos corporativos e feiras
+              </li>
+              <li class="corporate__list-item">
+                <span class="corporate__check" aria-hidden="true">✓</span>
+                Kits de onboarding para novos colaboradores
+              </li>
+              <li class="corporate__list-item">
+                <span class="corporate__check" aria-hidden="true">✓</span>
+                Presentes de fim de ano e datas comemorativas
+              </li>
+              <li class="corporate__list-item">
+                <span class="corporate__check" aria-hidden="true">✓</span>
+                Campanhas de incentivo e reconhecimento
+              </li>
+              <li class="corporate__list-item">
+                <span class="corporate__check" aria-hidden="true">✓</span>
+                Personalização com logo e cores da empresa
+              </li>
+              <li class="corporate__list-item">
+                <span class="corporate__check" aria-hidden="true">✓</span>
+                Atendimento para academias, escolas e escritórios
+              </li>
+            </ul>
+            <a href="https://wa.me/5516992347993?text=Ol%C3%A1!%20Gostaria%20de%20solicitar%20um%20or%C3%A7amento%20para%20brindes%20corporativos."
+               class="btn btn--orange btn--lg"
+               target="_blank" rel="noopener noreferrer"
+               aria-label="Solicitar orçamento corporativo pelo WhatsApp">
+              Solicitar orçamento agora
+              <svg class="btn__icon" aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </a>
+          </div>
+          <div class="corporate__visual reveal reveal--delay-2" aria-hidden="true">
+            <div class="corporate__card-stack">
+              <div class="corp-card corp-card--1">
+                <div class="corp-card__icon">
+                  <svg viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="1.5">
+                    <rect x="5" y="10" width="30" height="25" rx="3"/>
+                    <path d="M15 10V7a5 5 0 0110 0v3"/>
+                    <circle cx="20" cy="22" r="3"/>
+                  </svg>
+                </div>
+                <div>
+                  <strong>+150 empresas</strong>
+                  <p>já confiaram na AC</p>
+                </div>
+              </div>
+              <div class="corp-card corp-card--2">
+                <div class="corp-card__icon">
+                  <svg viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="1.5">
+                    <path d="M20 5l3.5 7 7.5 1.1-5.5 5.3 1.3 7.6L20 23l-6.8 3-1.3-7.6L6.4 13.1l7.5-1.1z"/>
+                  </svg>
+                </div>
+                <div>
+                  <strong>4.9 estrelas</strong>
+                  <p>avaliação média</p>
+                </div>
+              </div>
+              <div class="corp-card corp-card--3">
+                <div class="corp-card__icon">
+                  <svg viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="1.5">
+                    <path d="M8 20 C8 13 13 8 20 8 S32 13 32 20 27 32 20 32 8 27 8 20z"/>
+                    <path d="M14 22l4 4 8-8"/>
+                  </svg>
+                </div>
+                <div>
+                  <strong>Entrega garantida</strong>
+                  <p>para todo o Brasil</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =============================================
+         SOBRE A EMPRESA
+    ============================================= -->
+    <section class="about" id="sobre" aria-labelledby="sobre-title">
+      <div class="container">
+        <div class="about__grid">
+          <div class="about__content reveal">
+            <span class="section-eyebrow">Nossa história</span>
+            <h2 class="section-title" id="sobre-title">Nascemos para transformar<br />o cotidiano em experiência.</h2>
+            <p class="about__text">
+              A AC Loja Virtual nasceu da crença de que cada produto do dia a dia pode ser mais do que funcional — pode ser especial. Fundada com foco em qualidade, personalização e atendimento humano, crescemos atendendo tanto o consumidor final quanto empresas que buscam presentes e brindes que realmente impressionam.
+            </p>
+            <p class="about__text">
+              Trabalhamos com linha térmica premium, eletrônicos cuidadosamente selecionados e projetos corporativos completos. Cada pedido é tratado com atenção, do primeiro contato até a entrega.
+            </p>
+
+            <div class="about__mvv" role="list" aria-label="Missão, Visão e Valores">
+              <div class="mvv-item reveal" role="listitem">
+                <span class="mvv-item__label">Missão</span>
+                <p>Oferecer produtos de qualidade com atendimento ágil, personalização cuidadosa e entrega que supera expectativas.</p>
+              </div>
+              <div class="mvv-item reveal reveal--delay-1" role="listitem">
+                <span class="mvv-item__label">Visão</span>
+                <p>Ser referência em produtos personalizados no Brasil, conectando marcas e pessoas através de experiências únicas.</p>
+              </div>
+              <div class="mvv-item reveal reveal--delay-2" role="listitem">
+                <span class="mvv-item__label">Valores</span>
+                <p>Qualidade, honestidade, agilidade, personalização e compromisso com a satisfação de cada cliente.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="about__visual reveal reveal--delay-1" aria-hidden="true">
+            <div class="about__img-grid">
+              <div class="about__img about__img--1">
+                <svg viewBox="0 0 300 200" fill="none" xmlns="http://www.w3.org/2000/svg" aria-label="Equipe trabalhando">
+                  <rect width="300" height="200" rx="16" fill="url(#aboutGrad1)"/>
+                  <!-- Silhuetas de pessoas trabalhando -->
+                  <circle cx="80" cy="70" r="20" fill="rgba(255,255,255,0.15)"/>
+                  <path d="M55 130 Q80 110 105 130 L105 170 L55 170 Z" fill="rgba(255,255,255,0.1)"/>
+                  <circle cx="150" cy="65" r="20" fill="rgba(255,255,255,0.15)"/>
+                  <path d="M125 130 Q150 110 175 130 L175 170 L125 170 Z" fill="rgba(255,255,255,0.1)"/>
+                  <circle cx="220" cy="70" r="20" fill="rgba(255,255,255,0.15)"/>
+                  <path d="M195 130 Q220 110 245 130 L245 170 L195 170 Z" fill="rgba(255,255,255,0.1)"/>
+                  <!-- Mesa -->
+                  <rect x="40" y="125" width="220" height="6" rx="3" fill="rgba(255,255,255,0.2)"/>
+                  <defs>
+                    <linearGradient id="aboutGrad1" x1="0" y1="0" x2="300" y2="200" gradientUnits="userSpaceOnUse">
+                      <stop offset="0%" stop-color="#1e3a8a"/>
+                      <stop offset="100%" stop-color="#1e293b"/>
+                    </linearGradient>
+                  </defs>
+                </svg>
+              </div>
+              <div class="about__img about__img--2">
+                <svg viewBox="0 0 140 140" fill="none" xmlns="http://www.w3.org/2000/svg" aria-label="Produto premium">
+                  <rect width="140" height="140" rx="16" fill="url(#aboutGrad2)"/>
+                  <rect x="45" y="15" width="50" height="110" rx="18" fill="rgba(255,255,255,0.15)" stroke="rgba(255,255,255,0.3)" stroke-width="1"/>
+                  <rect x="48" y="18" width="44" height="104" rx="15" fill="rgba(255,255,255,0.05)"/>
+                  <text x="70" y="75" text-anchor="middle" fill="rgba(255,255,255,0.6)" font-size="10" font-family="Inter">AC</text>
+                  <defs>
+                    <linearGradient id="aboutGrad2" x1="0" y1="0" x2="140" y2="140" gradientUnits="userSpaceOnUse">
+                      <stop offset="0%" stop-color="#fb923c"/>
+                      <stop offset="100%" stop-color="#ea580c"/>
+                    </linearGradient>
+                  </defs>
+                </svg>
+              </div>
+              <div class="about__img about__img--3">
+                <svg viewBox="0 0 140 140" fill="none" xmlns="http://www.w3.org/2000/svg" aria-label="Entrega rápida">
+                  <rect width="140" height="140" rx="16" fill="url(#aboutGrad3)"/>
+                  <!-- Caminhão de entrega simplificado -->
+                  <rect x="20" y="55" width="80" height="55" rx="6" fill="rgba(255,255,255,0.15)"/>
+                  <rect x="100" y="65" width="30" height="45" rx="6" fill="rgba(255,255,255,0.1)"/>
+                  <circle cx="40" cy="110" r="12" fill="rgba(255,255,255,0.2)" stroke="rgba(255,255,255,0.4)" stroke-width="2"/>
+                  <circle cx="110" cy="110" r="12" fill="rgba(255,255,255,0.2)" stroke="rgba(255,255,255,0.4)" stroke-width="2"/>
+                  <!-- Seta de velocidade -->
+                  <path d="M30 75 L90 75" stroke="rgba(255,255,255,0.3)" stroke-width="2" stroke-dasharray="4,3"/>
+                  <defs>
+                    <linearGradient id="aboutGrad3" x1="0" y1="0" x2="140" y2="140" gradientUnits="userSpaceOnUse">
+                      <stop offset="0%" stop-color="#0ea5e9"/>
+                      <stop offset="100%" stop-color="#0369a1"/>
+                    </linearGradient>
+                  </defs>
+                </svg>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =============================================
+         DEPOIMENTOS
+    ============================================= -->
+    <section class="testimonials" id="depoimentos" aria-labelledby="depoimentos-title">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="section-eyebrow">Depoimentos</span>
+          <h2 class="section-title" id="depoimentos-title">O que nossos clientes dizem</h2>
+          <p class="section-desc">Mais de 2.400 clientes satisfeitos. Aqui estão algumas histórias reais.</p>
+        </div>
+
+        <div class="testimonials__grid">
+
+          <article class="testimonial-card reveal" style="--delay:0.1s">
+            <div class="testimonial-card__stars" aria-label="5 estrelas" role="img">
+              <span aria-hidden="true">★★★★★</span>
+            </div>
+            <blockquote class="testimonial-card__quote">
+              "Pedi um kit de onboarding para 30 colaboradores e a qualidade superou todas as expectativas. A garrafa personalizada com o logo da empresa ficou incrível. Atendimento muito rápido pelo WhatsApp."
+            </blockquote>
+            <footer class="testimonial-card__footer">
+              <div class="testimonial-card__avatar" aria-hidden="true">RC</div>
+              <div>
+                <strong class="testimonial-card__name">Roberta C.</strong>
+                <span class="testimonial-card__role">Gerente de RH — São Paulo, SP</span>
+              </div>
+            </footer>
+          </article>
+
+          <article class="testimonial-card reveal" style="--delay:0.2s">
+            <div class="testimonial-card__stars" aria-label="5 estrelas" role="img">
+              <span aria-hidden="true">★★★★★</span>
+            </div>
+            <blockquote class="testimonial-card__quote">
+              "Comprei o Smartwatch Pro Series e simplesmente não consigo mais treinar sem ele. Veio bem embalado, entregou antes do prazo e o suporte tirou todas as minhas dúvidas em minutos."
+            </blockquote>
+            <footer class="testimonial-card__footer">
+              <div class="testimonial-card__avatar" aria-hidden="true">FM</div>
+              <div>
+                <strong class="testimonial-card__name">Felipe M.</strong>
+                <span class="testimonial-card__role">Personal Trainer — Ribeirão Preto, SP</span>
+              </div>
+            </footer>
+          </article>
+
+          <article class="testimonial-card reveal" style="--delay:0.3s">
+            <div class="testimonial-card__stars" aria-label="5 estrelas" role="img">
+              <span aria-hidden="true">★★★★★</span>
+            </div>
+            <blockquote class="testimonial-card__quote">
+              "A garrafa térmica mantem o café quente até depois do almoço. Parece frescura, mas faz toda diferença no escritório. Já recomendei para o time inteiro e comprei mais 3."
+            </blockquote>
+            <footer class="testimonial-card__footer">
+              <div class="testimonial-card__avatar" aria-hidden="true">AL</div>
+              <div>
+                <strong class="testimonial-card__name">Ana L.</strong>
+                <span class="testimonial-card__role">Diretora Executiva — Campinas, SP</span>
+              </div>
+            </footer>
+          </article>
+
+          <article class="testimonial-card reveal" style="--delay:0.4s">
+            <div class="testimonial-card__stars" aria-label="5 estrelas" role="img">
+              <span aria-hidden="true">★★★★★</span>
+            </div>
+            <blockquote class="testimonial-card__quote">
+              "Contratei para o evento de fim de ano da empresa. 200 brindes personalizados entregues em 10 dias. Qualidade impecável, preço justo e o contato via WhatsApp tornou tudo muito simples."
+            </blockquote>
+            <footer class="testimonial-card__footer">
+              <div class="testimonial-card__avatar" aria-hidden="true">MS</div>
+              <div>
+                <strong class="testimonial-card__name">Marcos S.</strong>
+                <span class="testimonial-card__role">CEO — Franca, SP</span>
+              </div>
+            </footer>
+          </article>
+
+          <article class="testimonial-card reveal" style="--delay:0.5s">
+            <div class="testimonial-card__stars" aria-label="5 estrelas" role="img">
+              <span aria-hidden="true">★★★★★</span>
+            </div>
+            <blockquote class="testimonial-card__quote">
+              "Comprei o Power Bank para a minha mochila de viagem. Excelente custo-benefício — carregou meu celular e tablet durante um voo de 8h sem problema nenhum."
+            </blockquote>
+            <footer class="testimonial-card__footer">
+              <div class="testimonial-card__avatar" aria-hidden="true">LT</div>
+              <div>
+                <strong class="testimonial-card__name">Lucas T.</strong>
+                <span class="testimonial-card__role">Fotógrafo — Belo Horizonte, MG</span>
+              </div>
+            </footer>
+          </article>
+
+          <article class="testimonial-card reveal" style="--delay:0.6s">
+            <div class="testimonial-card__stars" aria-label="5 estrelas" role="img">
+              <span aria-hidden="true">★★★★★</span>
+            </div>
+            <blockquote class="testimonial-card__quote">
+              "Pedimos squeezes personalizados para a academia. Nossos alunos adoraram! A personalização com o logo ficou nítida e duradoura. Com certeza voltarei a comprar."
+            </blockquote>
+            <footer class="testimonial-card__footer">
+              <div class="testimonial-card__avatar" aria-hidden="true">PG</div>
+              <div>
+                <strong class="testimonial-card__name">Patrícia G.</strong>
+                <span class="testimonial-card__role">Proprietária de Academia — Bauru, SP</span>
+              </div>
+            </footer>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- =============================================
+         FAQ
+    ============================================= -->
+    <section class="faq" id="faq" aria-labelledby="faq-title">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="section-eyebrow">Dúvidas frequentes</span>
+          <h2 class="section-title" id="faq-title">Perguntas que todo<br />mundo faz</h2>
+        </div>
+
+        <div class="faq__list" role="list">
+
+          <details class="faq__item reveal" role="listitem">
+            <summary class="faq__question" aria-expanded="false">
+              Como funciona o processo de compra?
+              <span class="faq__icon" aria-hidden="true">+</span>
+            </summary>
+            <div class="faq__answer">
+              <p>É simples! Escolha o produto aqui no site, clique em "Comprar pelo WhatsApp" e você será direcionado para uma conversa direta com nossa equipe. Lá você confirma o pedido, combina o pagamento e acompanha o envio.</p>
+            </div>
+          </details>
+
+          <details class="faq__item reveal" role="listitem">
+            <summary class="faq__question" aria-expanded="false">
+              Quais são as formas de pagamento aceitas?
+              <span class="faq__icon" aria-hidden="true">+</span>
+            </summary>
+            <div class="faq__answer">
+              <p>Aceitamos Pix, transferência bancária, cartão de crédito (parcelamento disponível) e boleto bancário. Confirme os métodos disponíveis diretamente no atendimento pelo WhatsApp.</p>
+            </div>
+          </details>
+
+          <details class="faq__item reveal" role="listitem">
+            <summary class="faq__question" aria-expanded="false">
+              Vocês enviam para todo o Brasil?
+              <span class="faq__icon" aria-hidden="true">+</span>
+            </summary>
+            <div class="faq__answer">
+              <p>Sim! Realizamos envios para todos os estados brasileiros via Correios e transportadoras. O prazo de entrega varia conforme a localidade, e você recebe o código de rastreio assim que o pedido é despachado.</p>
+            </div>
+          </details>
+
+          <details class="faq__item reveal" role="listitem">
+            <summary class="faq__question" aria-expanded="false">
+              Qual o prazo para pedidos personalizados com logotipo?
+              <span class="faq__icon" aria-hidden="true">+</span>
+            </summary>
+            <div class="faq__answer">
+              <p>Pedidos de personalização (gravação a laser, silk, bordado) têm prazo de produção de 5 a 10 dias úteis após a aprovação do layout. Esse prazo é somado ao tempo de envio. Para pedidos urgentes, entre em contato para verificar a disponibilidade.</p>
+            </div>
+          </details>
+
+          <details class="faq__item reveal" role="listitem">
+            <summary class="faq__question" aria-expanded="false">
+              Tem quantidade mínima para pedidos corporativos?
+              <span class="faq__icon" aria-hidden="true">+</span>
+            </summary>
+            <div class="faq__answer">
+              <p>Para brindes personalizados com logo, geralmente pedimos um mínimo de 10 unidades por item. Porém, cada caso é analisado individualmente — entre em contato pelo WhatsApp e faremos o melhor para atender sua necessidade.</p>
+            </div>
+          </details>
+
+          <details class="faq__item reveal" role="listitem">
+            <summary class="faq__question" aria-expanded="false">
+              Os produtos têm garantia?
+              <span class="faq__icon" aria-hidden="true">+</span>
+            </summary>
+            <div class="faq__answer">
+              <p>Sim! Todos os produtos eletrônicos têm garantia de fábrica de 3 a 12 meses, dependendo do item. Produtos da linha térmica têm garantia contra defeitos de fabricação. Em caso de qualquer problema, basta nos contatar pelo WhatsApp.</p>
+            </div>
+          </details>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- =============================================
+         CONTATO / CTA FINAL
+    ============================================= -->
+    <section class="contact" id="contato" aria-labelledby="contato-title">
+      <div class="container">
+        <div class="contact__inner">
+
+          <div class="contact__info reveal">
+            <span class="section-eyebrow section-eyebrow--light">Fale conosco</span>
+            <h2 class="section-title section-title--light" id="contato-title">
+              Pronto para fazer<br />seu pedido?
+            </h2>
+            <p class="contact__desc">
+              Nossa equipe está disponível de segunda a sábado, das 8h às 18h. Resposta rápida garantida. Clique abaixo e fale diretamente com a gente.
+            </p>
+
+            <div class="contact__channels" role="list" aria-label="Canais de contato">
+              <a href="https://wa.me/5516992347993?text=Ol%C3%A1!%20Gostaria%20de%20fazer%20um%20pedido."
+                 class="contact__channel"
+                 target="_blank" rel="noopener noreferrer"
+                 role="listitem"
+                 aria-label="Contato pelo WhatsApp">
+                <div class="contact__channel-icon contact__channel-icon--green">
+                  <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+                </div>
+                <div>
+                  <strong>WhatsApp</strong>
+                  <span>+55 16 99234-7993</span>
+                </div>
+              </a>
+
+              <a href="https://instagram.com/aclojavirtual"
+                 class="contact__channel"
+                 target="_blank" rel="noopener noreferrer"
+                 role="listitem"
+                 aria-label="Perfil do Instagram da AC Loja Virtual">
+                <div class="contact__channel-icon contact__channel-icon--pink">
+                  <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+                </div>
+                <div>
+                  <strong>Instagram</strong>
+                  <span>@aclojavirtual</span>
+                </div>
+              </a>
+
+              <a href="mailto:contato@aclojavirtual.com.br"
+                 class="contact__channel"
+                 role="listitem"
+                 aria-label="Enviar e-mail para AC Loja Virtual">
+                <div class="contact__channel-icon contact__channel-icon--blue">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
+                </div>
+                <div>
+                  <strong>E-mail</strong>
+                  <span>contato@aclojavirtual.com.br</span>
+                </div>
+              </a>
+            </div>
+          </div>
+
+          <!-- CTA grande -->
+          <div class="contact__cta reveal reveal--delay-2" aria-label="Chamada para ação">
+            <div class="contact__cta-card">
+              <div class="contact__cta-icon" aria-hidden="true">
+                <svg viewBox="0 0 80 80" fill="none">
+                  <circle cx="40" cy="40" r="36" fill="rgba(255,255,255,0.1)" stroke="rgba(255,255,255,0.2)" stroke-width="1"/>
+                  <path d="M52.8 43.8c-.9-.45-5.3-2.6-6.1-2.9-.8-.3-1.4-.45-2 .45-.6.9-2.3 2.9-2.8 3.5-.5.6-1 .67-1.93.22-.9-.45-3.77-1.39-7.17-4.42-2.65-2.36-4.44-5.28-4.96-6.18-.52-.9-.05-1.38.39-1.82.4-.4.9-1.04 1.34-1.56.45-.52.6-.9.9-1.49.3-.6.15-1.11-.07-1.56-.22-.45-2-4.84-2.75-6.62-.73-1.74-1.46-1.5-2-.1-.02.02-.02.05-.04.07A9.2 9.2 0 0024.4 26c0 4.37 3.2 8.62 3.64 9.21.45.6 6.3 9.62 15.25 13.47 2.13.92 3.8 1.47 5.1 1.88 2.14.68 4.09.58 5.63.35 1.72-.26 5.28-2.16 6.03-4.24.75-2.08.75-3.87.52-4.24-.22-.37-.83-.6-1.77-1.05z" fill="white"/>
+                </svg>
+              </div>
+              <h3 class="contact__cta-title">Fale agora e receba<br />atendimento imediato</h3>
+              <p class="contact__cta-desc">Seg – Sab &nbsp;|&nbsp; 08h às 18h<br />Resposta em até 5 minutos</p>
+              <a href="https://wa.me/5516992347993?text=Ol%C3%A1!%20Vim%20pelo%20site%20e%20gostaria%20de%20saber%20mais%20sobre%20os%20produtos."
+                 class="btn btn--whatsapp btn--xl btn--full"
+                 target="_blank" rel="noopener noreferrer"
+                 aria-label="Iniciar conversa pelo WhatsApp">
+                <svg class="btn__icon" aria-hidden="true" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+                Iniciar conversa no WhatsApp
+              </a>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- =============================================
+       FOOTER
+  ============================================= -->
+  <footer class="footer" role="contentinfo" aria-label="Rodapé do site">
+    <div class="container">
+      <div class="footer__grid">
+
+        <!-- Marca -->
+        <div class="footer__brand">
+          <a href="#hero" class="footer__logo" aria-label="AC Loja Virtual - Voltar ao topo">
+            <div class="nav__logo-icon footer__logo-icon" aria-hidden="true">AC</div>
+            <div>
+              <span class="footer__logo-name">AC Loja Virtual</span>
+              <span class="footer__logo-tagline">Qualidade, tecnologia e personalização</span>
+            </div>
+          </a>
+          <p class="footer__desc">
+            Produtos premium para o seu dia a dia e brindes corporativos que fortalecem marcas. Atendimento via WhatsApp, envio para todo o Brasil.
+          </p>
+          <div class="footer__social" aria-label="Redes sociais">
+            <a href="https://wa.me/5516992347993" class="footer__social-link" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp da AC Loja Virtual">
+              <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+            </a>
+            <a href="https://instagram.com/aclojavirtual" class="footer__social-link" target="_blank" rel="noopener noreferrer" aria-label="Instagram da AC Loja Virtual">
+              <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+            </a>
+          </div>
+        </div>
+
+        <!-- Links rápidos -->
+        <nav class="footer__nav" aria-label="Links rápidos do rodapé">
+          <h3 class="footer__nav-title">Navegação</h3>
+          <ul role="list">
+            <li><a href="#produtos">Produtos</a></li>
+            <li><a href="#brindes">Brindes Corporativos</a></li>
+            <li><a href="#sobre">Sobre nós</a></li>
+            <li><a href="#depoimentos">Depoimentos</a></li>
+            <li><a href="#faq">Perguntas Frequentes</a></li>
+            <li><a href="#contato">Contato</a></li>
+          </ul>
+        </nav>
+
+        <!-- Categorias -->
+        <nav class="footer__nav" aria-label="Categorias de produtos">
+          <h3 class="footer__nav-title">Produtos</h3>
+          <ul role="list">
+            <li><a href="#produtos">Garrafas Térmicas</a></li>
+            <li><a href="#produtos">Copos Personalizados</a></li>
+            <li><a href="#produtos">Squeezes</a></li>
+            <li><a href="#produtos">Smartwatches</a></li>
+            <li><a href="#produtos">Power Banks</a></li>
+            <li><a href="#produtos">Fones Bluetooth</a></li>
+          </ul>
+        </nav>
+
+        <!-- Contato rápido -->
+        <div class="footer__contact">
+          <h3 class="footer__nav-title">Contato</h3>
+          <p>
+            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+            +55 16 99234-7993
+          </p>
+          <p>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
+            contato@aclojavirtual.com.br
+          </p>
+          <p>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+            Seg–Sab: 08h às 18h
+          </p>
+          <a href="https://wa.me/5516992347993?text=Ol%C3%A1!%20Tenho%20interesse%20nos%20produtos%20da%20AC%20Loja%20Virtual."
+             class="btn btn--whatsapp btn--sm"
+             target="_blank" rel="noopener noreferrer"
+             aria-label="Contato rápido pelo WhatsApp">
+            <svg class="btn__icon" aria-hidden="true" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+            Chamar agora
+          </a>
+        </div>
+
+      </div>
+
+      <div class="footer__bottom">
+        <p>&copy; <span id="currentYear"></span> AC Loja Virtual. Todos os direitos reservados.</p>
+        <p>Desenvolvido com ❤️ para entregar o melhor para você.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Botão WhatsApp flutuante -->
+  <a href="https://wa.me/5516992347993?text=Ol%C3%A1!%20Vim%20pelo%20site%20e%20gostaria%20de%20saber%20mais."
+     class="whatsapp-float"
+     target="_blank" rel="noopener noreferrer"
+     aria-label="Abrir WhatsApp — Fale conosco">
+    <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+    <span class="whatsapp-float__tooltip">Fale conosco!</span>
+  </a>
+
+  <!-- Botão voltar ao topo -->
+  <button class="back-to-top" id="backToTop" aria-label="Voltar ao topo" title="Voltar ao topo">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+      <path d="M18 15l-6-6-6 6"/>
+    </svg>
+  </button>
+
+  <!-- JavaScript principal -->
+  <script src="script.js"></script>
 </body>
 </html>
